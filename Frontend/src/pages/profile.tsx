@@ -33,7 +33,7 @@ const ProfilePage = () => {
     useEffect(() => {
         const fetchUserDetails = async () => {
             try {
-                const response = await axios.get<UserFetchedDetails>(`http://localhost:3000/detail/${id}`);
+                const response = await axios.get<UserFetchedDetails>(`https://demo-app-mevb.onrender.com/detail/${id}`);
                 console.log(response.data.UserDetails);
 
                 setFormData({
@@ -67,7 +67,7 @@ const ProfilePage = () => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:3000/update/${id}}`, {
+            await axios.put(`https://demo-app-mevb.onrender.com/update/${id}}`, {
                 name: formData.name,
                 email: formData.email,
                 phone_no: formData.phone,

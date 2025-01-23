@@ -50,7 +50,7 @@ const LoginPage: React.FC = () => {
       setIsLoading(true)
       console.log(formData);
 
-      const response = await axios.post<SignupResponse>("http://localhost:3000/login", formData);
+      const response = await axios.post<SignupResponse>("https://demo-app-mevb.onrender.com/login", formData);
 
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
