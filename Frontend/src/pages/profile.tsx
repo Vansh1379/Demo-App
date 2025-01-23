@@ -12,7 +12,6 @@ interface UserFetchedDetails {
     };
 }
 
-
 const ProfilePage = () => {
 
     const navigate = useNavigate();
